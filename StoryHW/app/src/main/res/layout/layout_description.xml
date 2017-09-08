@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <View
-        android:id="@+id/tv_bgTop"
+        android:id="@+id/v_bg"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@color/colorAccent2" />
@@ -14,7 +14,8 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/tv_bgTop" />
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/v_bg" />
 
     <ImageButton
         android:id="@+id/bt_back"
@@ -49,6 +50,7 @@
             android:layout_height="match_parent">
 
             <Button
+                android:id="@+id/bt_read"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
@@ -60,7 +62,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_titleDes"
+                android:id="@+id/tv_titleD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/bt_back"
@@ -71,19 +73,20 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/tv_authorDes"
+                android:id="@+id/tv_authorD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_titleDes"
+                android:layout_below="@id/tv_titleD"
                 android:gravity="center"
                 android:text="Author"
                 android:textSize="15sp"
                 android:textStyle="italic" />
 
             <TextView
+                android:id="@+id/tv_contentD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_authorDes"
+                android:layout_below="@id/tv_authorD"
                 android:layout_margin="@dimen/padding_item"
                 android:gravity="fill_horizontal"
                 android:text="      cxxxx" />
@@ -101,6 +104,7 @@
 
         <ImageView
             android:id="@+id/iv_image"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/colorAccent">
